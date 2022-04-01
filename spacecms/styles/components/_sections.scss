@@ -1,0 +1,211 @@
+section {
+    margin: 0;
+    padding: 2 * $baseLine 0;
+    position: relative;
+
+    @include mqmd {
+        padding: $baseLine 0;
+    }
+
+    &.pagehead {
+        background-color: $blue100;
+        background-image: url('../images/spacedark@2x.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-attachment: fixed;
+        color: $textColorInvert;
+        min-height: 18 * $baseLine;
+        display: flex;
+        align-items: center;
+        padding-top: 3 * $baseLine;
+
+        h4 {
+            text-shadow: 0 0 12px $blue100;
+        }
+    }
+
+    &.landing {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.brief {
+    }
+
+    &.features {
+        background-image: url('../images/isometric_background.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+    }
+
+    &.projects {
+        background: rgb(0,197,227);
+        background: -moz-linear-gradient(top, rgba($blue000,1) 0%, rgba($blue000,1) 60%, rgba($uiElement,.5) 60%, rgba($body,1) 100%);
+        background: -webkit-linear-gradient(top, rgba($blue000,1) 0%,rgba($blue000,1) 60%,rgba($uiElement,.5) 60%,rgba($body,1) 100%);
+        background: linear-gradient(to bottom, rgba($blue000,1) 0%,rgba($blue000,1) 60%,rgba($uiElement,.5) 60%,rgba($body,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c5e3', endColorstr='#fafafa',GradientType=0 );
+    }
+
+    &.tryfree {
+    }
+
+    &.pricing {
+    }
+
+    &.developers {
+        img {
+            margin-top: -35%;
+        }
+    }
+
+    &.framework {
+        background-color: #f5f5f5;
+        background-image: url('../images/isometric_background.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &.contact {
+    }
+}
+
+.feature {
+    margin-top: 2 * $baseLine;
+
+    @include mqlg {
+        margin-top: 0;
+    }
+
+    .description {
+        margin: 2 * $baseLine 0;
+
+        @include mqmd {
+            margin: $baseLine 0 0 0;
+        }
+    }
+
+    .image {
+        display: flex;
+
+        img {
+            margin: auto;
+            max-height: 10 * $baseLine;
+
+            @include mqmd {
+                margin: 0;
+                max-height: 6 * $baseLine;
+            }
+        }
+    }
+}
+
+.pricing {
+    .packages {
+
+        .package {
+            @include mqmd {
+                margin-bottom: $baseLine / 2;
+            }
+
+            .name {
+                @include lato;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                background: rgba($uiElement, .25);
+                border-radius: 4px 4px 0 0;
+                margin: 0;
+                padding: $baseLine 0;
+
+                @include mqmd {
+                    padding: $baseLine / 2 0;
+                }
+            }
+
+            .price {
+                .per,
+                .value {
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                    line-height: 2 * $baseLine;
+                    @include hind;
+                    font-weight: 600;
+                }
+
+                .per {
+                    background: rgba($uiElement, .5);
+                    float: left;
+                    font-size: 22px;
+                }
+
+                .value {
+                    font-size: 36px;
+                    background: $blue100;
+                    color: $white;
+                }
+            }
+
+            .includes {
+                padding: $baseLine / 2;
+                list-style: none;
+                margin: 0;
+                border-left: 2px solid rgba($uiElement, .25);
+                border-right: 2px solid rgba($uiElement, .25);
+
+                .glyphicon {
+                    color: $yellow;
+                    font-size: 14px;
+                    margin-right: $baseLine / 6;
+                }
+
+                li {
+                    border-bottom: 1px dotted $uiElement;
+                    padding: $baseLine / 6 $baseLine / 3;
+
+                    &.out {
+                        opacity: .25;
+                        font-weight: 400;
+
+                        @include mqsm {
+                            display: none;
+                        }
+
+                        .glyphicon {
+                            color: $uiElement;
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .sign-up {
+                background: rgba($uiElement, .25);
+                border-radius: 0 0 4px 4px;
+                padding: $baseLine;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.contact {
+    .image {
+        display: flex;
+
+        img {
+            margin: auto;
+            max-height: 10 * $baseLine;
+
+            @include mqmd {
+                margin: 0;
+                max-height: 6 * $baseLine;
+            }
+        }
+    }
+}

@@ -1,0 +1,223 @@
+.navbar {
+    background: none;
+    background-image: -webkit-linear-gradient(top, rgba($blue101, 1) 0%, rgba($blue101, 0) 100%);
+    background-image: -o-linear-gradient(top, rgba($blue101, 1) 0%, rgba($blue101, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba($blue101, 1) 0%, rgba($blue101, 0) 100%);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($blue101)}', endColorstr='#{ie-hex-str($blue101)}', GradientType=0);
+    min-height: 3 * $baseLine;
+
+    .navbar-right {
+        margin-right: 0;
+    }
+
+    @media (min-width: 768px) {
+        & > .container .navbar-brand,
+        & > .container-fluid .navbar-brand {
+            margin: 0;
+        }
+    }
+
+    a,
+    li > a {
+        @include transition(all, .2s, ease-in);
+        line-height: 3 * $baseLine;
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        padding: 0;
+
+        @include mqmd {
+            padding: 0 15px;
+        }
+    }
+
+    li > a {
+        margin-left: $baseLine;
+    }
+
+    &.affix {
+        @include transition(all, .2s, ease-in);
+        min-height: 2 * $baseLine;
+        background: $blue100;
+        -webkit-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 3px 12px 0px rgba(0,0,0,0.1);
+
+        a,
+        li > a {
+            line-height: 2 * $baseLine;
+        }
+    }
+}
+
+.navbar-default {
+    border: none;
+
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        font-size: 36px;
+        color: $white;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+
+        strong {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .accent {
+            color: $yellow;
+            font-weight: 300;
+        }
+
+        &:hover,
+        &:focus {
+            color: $white;
+            opacity: .8;
+        }
+    }
+
+    .navbar-collapse {
+        border: none;
+    }
+
+    .navbar-collapse.in {
+        max-height: 100%;
+        padding: $baseLine / 2 0;
+
+        .navbar-nav {
+            padding: 0;
+            margin: 0;
+
+            li > a {
+                line-height: $baseLine;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        border: none;
+        margin: 0;
+        padding: 0;
+
+
+        &:hover,
+        &:focus {
+            background: none;
+            opacity: .8;
+        }
+
+        .icon-bar {
+            display: block;
+            width: $baseLine;
+            height: 3px;
+            border-radius: 2px;
+            margin: 6px;
+            background-color: $white;
+        }
+
+        .icon-bar {
+            transition: opacity, transform;
+            transition-duration: .2s;
+            transition-timing-function: ease-in;
+        }
+
+        &:not(.collapsed) {
+            .icon-bar {
+                &:nth-child(2) {
+                    transform: translate3d(0,10px,0) rotate(135deg);
+                }
+
+                &:nth-child(3) {
+                    opacity: 0;
+                    transform: translateX(-100%);
+                }
+
+                &:nth-child(4) {
+                    transform: translate3d(0,-8px,0) rotate(-135deg);
+                }
+            }
+        }
+    }
+
+    .navbar-nav {
+
+        > li > a {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            &:hover,
+            &:focus {
+                color: $yellow;
+                background: none;
+            }
+        }
+
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $yellow;
+                background: none;
+            }
+        }
+
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $yellow;
+                background: none;
+            }
+        }
+    }
+}
+
+@include mqmd {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text {
+        float: none;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .collapsing {
+        overflow: hidden !important;
+    }
+}

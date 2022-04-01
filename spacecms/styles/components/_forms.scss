@@ -1,0 +1,109 @@
+.form-group {
+    margin-bottom: $baseLine / 2;
+}
+
+.form-control {
+    @include lato;
+    font-size: 24px;
+    height: 1.5 * $baseLine;
+    line-height: 1.5 * $baseLine;
+    border: 2px solid $uiElement;
+    background: none;
+    border-radius: 4px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    width: 100%;
+    position: relative;
+    padding: 0 $baseLine / 2;
+
+    @include mqmd {
+        margin-right: 0;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $primary;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.get-demo {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    flex-wrap: wrap;
+
+    .btn {
+        border-radius: 0 4px 4px 0;
+
+        &:after {
+            @include pseudo;
+            left: -60px;
+            top: 50%;
+            margin-top: -60px;
+            background-image: url('../images/rocket.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    @include mqmd {
+        .btn {
+            border-radius: 0 0 4px 4px;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .form-control {
+        border: 2px solid $blue;
+        background: none;
+        border-radius: 4px;
+        border-radius: 4px 0 0 4px;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        @include lato;
+        font-size: 24px;
+        height: 2 * $baseLine;
+        line-height: 2 * $baseLine;
+        padding-left: 2 * $baseLine;
+        width: 100%;
+        position: relative;
+
+        @include mqmd {
+            margin-right: 0;
+            border-radius: 4px 4px 0 0;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $blue100;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        &.email {
+            background-image: url('../images/envelope.png');
+            background-repeat: no-repeat;
+            background-position: 24px center;
+            flex: 1;
+        }
+    }
+}
+
+label {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 0;
+    margin: 0 0 $baseLine/4 0;
+}
+
+textarea {
+    resize: none;
+}
