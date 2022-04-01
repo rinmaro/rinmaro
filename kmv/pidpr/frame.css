@@ -1,0 +1,29 @@
+#jam  {font-family: 'Noto Sans',sans-serif; font-size: 14px;}
+#jam  a:link {color:#0072c6;}
+#jam  a:visited  {color:#134671;}
+#jam  a:hover {color:#f35492;}
+#jam  a:active {color:#f35492;}
+#jam ol,ul { list-style:none;}
+#jam a {text-decoration:none;}
+
+#jam  .box { border: 1px solid #e7e7e7; 
+font-family: 'Noto Sans',sans-serif; font-size: 14px;
+display: block; padding:10px; margin: 0px; background-color: #f6f6f6;
+margin-bottom:5px; 
+border-left: 5px solid #e7e7e7;}
+
+#jam  .text { border: 1px solid #e7e7e7; 
+font-family: 'Noto Sans',sans-serif; font-size: 15px; 
+display: block; padding: 10px; margin: 0px; margin-bottom:5px;  background-color: #f6f6f6; text-align: justify;}
+
+#jam .text a { color: #0072c6; }
+#jam .text a:hover { color: #134671;}
+#jam .box a { color: #0072c6; }
+#jam .box a:hover { color: #134671;}
+
+#jam  p {text-align: justify; margin: 0px 0px 10px 0px; padding:0px;}
+#jam .text p {text-align: justify; margin:  0px 0px 10px 0px; padding:0px;}
+
+#jam h3 { padding:10px; margin: 0px 0px 5px 0px; background-color: #FFF; border-bottom: 3px solid #2b7cd9; }
+#jam hr { border: none; color:#e7e7e7; background-color:#e7e7e7; height:1px; width:100%; }
+#jam .text img {margin:0px 10px 0px 0px; border-bottom: 5px solid #e7e7e7;}
